@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- connect to what3words -->
+    <script src="https://assets.what3words.com/sdk/v3/what3words.js?key=0CX0YOMP"></script>
+
+    <title>Where In The World?</title>
+</head>
+
+<body>
+    <div class='container text-center'>
+
+        <div class='container p-3'>
+            <h1>Where in The World?</h1>
+        </div>
+
+        <div class='container'>
+            <form onsubmit="coordinatesReceived(event)">
+
+                <div class="form-group">
+                    <label>Latitude: </label>
+                    <input type='number' value="0" id='lat' step="any" min='-90' max='90' />
+                </div>
+
+
+
+                <div class="form-group">
+                    <label>Longitude: </label>
+                    <input type=number onclick="" value="0" step="any" id='lng' min='-180' max='180' />
+                </div>
+
+
+                <div class="form-group">
+                    <button type="submit" class='btn btn-primary'>What Three Words?</button>
+                </div>
+
+
+            </form>
+        </div>
+
+        <div class='container'>
+            <p><span id='threeWords'></span></p>
+
+        </div>
+
+        <div class="card-group">
+            <div class="card">
+                <img src='./questionMark.png' id='image0' alt='image' class="card-img-top"
+                    style="height: 38vh; width: auto;" />
+                <div class="card-body">
+                    <p class="card-text" id='word0'></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src='./questionMark.png' id='image1' alt='image' class="card-img-top"
+                    style="height: 38vh; width: auto;" />
+                <div class="card-body">
+                    <p class="card-text" id='word1'></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src='./questionMark.png' id='image2' alt='image' class="card-img-top"
+                    style="height: 38vh; width: auto;" />
+                <div class="card-body">
+                    <p class="card-text" id='word2'></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="where.js"></script>
+
+</html>
